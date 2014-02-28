@@ -19,7 +19,7 @@ lib/Mock/Person/JP.pm
 lib/Mock/Person/JP/Person.pm
 lib/Mock/Person/JP/Person/Name.pm
 minil.toml
-share/mei.tsv
+share/mei_female.tsv
 share/sei.tsv
 t/00_compile.t
 t/01_basic.t

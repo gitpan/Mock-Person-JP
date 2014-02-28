@@ -29,7 +29,7 @@ no_index:
 provides:
   Mock::Person::JP:
     file: lib/Mock/Person/JP.pm
-    version: 0.01
+    version: 0.02
   Mock::Person::JP::Person:
     file: lib/Mock/Person/JP/Person.pm
   Mock::Person::JP::Person::Name:
@@ -43,4 +43,4 @@ resources:
   bugtracker: https://github.com/pawa-/Mock-Person-JP/issues
   homepage: https://github.com/pawa-/Mock-Person-JP
   repository: git://github.com/pawa-/Mock-Person-JP
-version: 0.01
+version: 0.02
