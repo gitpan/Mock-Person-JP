@@ -24,5 +24,6 @@ share/sei.tsv
 t/00_compile.t
 t/01_basic.t
 t/02_name.t
+xt/90_name_format_check.t
 META.yml
 MANIFEST
