@@ -31,7 +31,7 @@ Mock::Person::JP - Generate random sets of Japanese names
 # DESCRIPTION
 
 Mock::Person::JP generates random sets of Japanese names
-by using 123,583 first names and 23,022 last names.
+by using 142,611 first names and 23,022 last names.
 
 # METHODS
 
@@ -41,8 +41,7 @@ Creates a new Mock::Person::JP instance.
 
 ## create\_person(sex => 'male' or 'female')
 
-Creates a new person with a random name. Sex option can take 'male' or 'female',
-but 'male' does not work yet because of lack of data.
+Creates a new person with a random name. Sex option can take 'male' or 'female'.
 
 ## name()
 
@@ -162,10 +161,36 @@ See [Mock::Person::JP::Person::Name](https://metacpan.org/pod/Mock::Person::JP::
         下記の方をのぞき 金銭を伴わない転載・改編は ご自由にどうぞ
         ﾊﾟｿｺﾝ通信等にてｼｪｱｳｴｱを登録されている方はそのｼｪｱｳｴｱの使用権と引き替えに個人的使用に限り許諾いたします
 
+- of Enamdict
+
+    Copyright is held by James William BREEN and The Electronic Dictionary Research and Development Group.
+
+    The dictionary files are made available under a Creative Commons Attribution-ShareAlike Licence (V3.0).
+
+    See [http://www.edrdg.org/edrdg/licence.html](http://www.edrdg.org/edrdg/licence.html) for the full licence.
+
+- of share/sei.tsv, share/mei\_female.tsv
+
+    Copyright (C) pawa.
+
+    You can redistribute these files and/or modify these files under the same terms as Perl itself.
+
+- of share/mei\_male.tsv
+
+    Copyright (C) pawa.
+
+    You can redistribute it and/or modify it under the same licence of Enamdict.
+
+    This file contains almost all the male given names of Enamdict.
+
 # SEE ALSO
 
 - [Mock::Person](https://metacpan.org/pod/Mock::Person)
 - 戸籍法施行規則第60条
+
+# CONTRIBUTORS
+
+Ben Bullock (BKB)
 
 # AUTHOR
 

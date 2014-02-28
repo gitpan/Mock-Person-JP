@@ -8,7 +8,7 @@ use File::ShareDir   ();
 use File::RandomLine ();
 use Mock::Person::JP::Person ();
 
-our $VERSION = "0.03";
+our $VERSION = "0.04";
 
 sub new
 {
@@ -17,6 +17,7 @@ sub new
     my $self = bless {}, $class;
 
     $self->{sei}         = File::RandomLine->new( File::ShareDir::dist_file('Mock-Person-JP', 'sei.tsv') );
+    $self->{mei}{male}   = File::RandomLine->new( File::ShareDir::dist_file('Mock-Person-JP', 'mei_male.tsv') );
     $self->{mei}{female} = File::RandomLine->new( File::ShareDir::dist_file('Mock-Person-JP', 'mei_female.tsv') );
 
     return $self;
@@ -35,7 +36,6 @@ sub create_person
         if ($key eq 'sex')
         {
             Carp::croak("sex option must be 'male' or 'female'") if $arg{$key} ne 'male' && $arg{$key} ne 'female';
-            Carp::croak("'male' option not implemented yet!")    if $arg{$key} eq 'male';
         }
         else { Carp::croak "Unknown option: '$key'";  }
     }
@@ -103,7 +103,7 @@ Mock::Person::JP - Generate random sets of Japanese names
 =head1 DESCRIPTION
 
 Mock::Person::JP generates random sets of Japanese names
-by using 123,583 first names and 23,022 last names.
+by using 142,611 first names and 23,022 last names.
 
 =head1 METHODS
 
@@ -113,8 +113,7 @@ Creates a new Mock::Person::JP instance.
 
 =head2 create_person(sex => 'male' or 'female')
 
-Creates a new person with a random name. Sex option can take 'male' or 'female',
-but 'male' does not work yet because of lack of data.
+Creates a new person with a random name. Sex option can take 'male' or 'female'.
 
 =head2 name()
 
@@ -237,6 +236,28 @@ Copyright (C) 憩舞華.
     下記の方をのぞき 金銭を伴わない転載・改編は ご自由にどうぞ
     ﾊﾟｿｺﾝ通信等にてｼｪｱｳｴｱを登録されている方はそのｼｪｱｳｴｱの使用権と引き替えに個人的使用に限り許諾いたします
 
+=item of Enamdict
+
+Copyright is held by James William BREEN and The Electronic Dictionary Research and Development Group.
+
+The dictionary files are made available under a Creative Commons Attribution-ShareAlike Licence (V3.0).
+
+See L<http://www.edrdg.org/edrdg/licence.html> for the full licence.
+
+=item of share/sei.tsv, share/mei_female.tsv
+
+Copyright (C) pawa.
+
+You can redistribute these files and/or modify these files under the same terms as Perl itself.
+
+=item of share/mei_male.tsv
+
+Copyright (C) pawa.
+
+You can redistribute it and/or modify it under the same licence of Enamdict.
+
+This file contains almost all the male given names of Enamdict.
+
 =back
 
 =head1 SEE ALSO
@@ -248,6 +269,10 @@ Copyright (C) 憩舞華.
 =item 戸籍法施行規則第60条
 
 =back
+
+=head1 CONTRIBUTORS
+
+Ben Bullock (BKB)
 
 =head1 AUTHOR
 
