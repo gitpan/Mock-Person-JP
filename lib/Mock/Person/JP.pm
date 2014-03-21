@@ -8,7 +8,7 @@ use File::ShareDir   ();
 use File::RandomLine ();
 use Mock::Person::JP::Person ();
 
-our $VERSION = "0.05";
+our $VERSION = "0.06";
 
 sub new
 {
@@ -87,7 +87,7 @@ Mock::Person::JP - Generate random sets of Japanese names
         printf("%s %s（%s %s）\n", $name->sei, $name->mei, $name->sei_yomi, $name->mei_yomi);
     }
 
-    # Sample output:
+    # Sample output (UTF-8 flag is on):
     # 小合 希砂妃（おごう きさき）
     # 井園 みのる（いその みのる）
     # 村山 菜奈世（むらやま ななよ）
